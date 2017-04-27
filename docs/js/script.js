@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const loadQuoteBtn = document.getElementById('loadQuote'),
-  tweetBtn = document.getElementById('tweetBtn'),
+  tweetBtn = document.getElementsByTagName('span')[0],
   getQuote = e => {
     $.ajax({
       headers: {
