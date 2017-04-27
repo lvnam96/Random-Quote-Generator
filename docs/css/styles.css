@@ -1,91 +1,134 @@
-body {
-  /*text-align: center;*/
-  background-color: #36b55c;
-  color: white;
-  font-family: 'Playfair Display', serif;
+/* Extra small devices (portrait phones, less than 576px)*/
+html{
+  box-sizing: border-box;
 }
-#quote-box {
-  position: absolute;
-  top: 20%;
-  left: 10%;
-  right: 10%;
-  width: 80%;
-  line-height: .5;
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+body{
+  min-width: 100%;
+  min-height: 100%;
+  background: url('../img/bg-milky-way.jpg') center center no-repeat;
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 100;
+  color: #FFF;
+}
+.container{
+  min-height: calc(100vh - 93px);
+/*  height: calc(100vh - 93px);*/
+  margin: 0 auto;
+  background-color: rgba(0,0,0,.5);
+  padding: 10px 0 0;
+}
+/* Tweet Button--------------- */
+#shareQuote{
+  text-align: right;
+}
+#shareQuote span{
+  cursor: pointer;
+  padding: 10px;
+  margin-right: 30px;
+}
+#shareQuote span:after{
+  content: "Tweet it!";
+
+}
+#tweetBtn{
+  cursor: pointer;
+  fill: #FFF;
+  display: inline;
+  transition: ease .5s;
+}
+
+/* Quote & Author--------------- */
+#quoteBox{
+  /*min-height: auto;*/
+  padding: 30px;
 }
 .quote {
-  font-size: 4rem;
-  font-weight: 400;
-  line-height: 1.1;
-  position: relative;
+  font-size: 2em;
   margin: 0;
-  } 
-.quote:before, .quote:after {
-  font-size: 6rem;
-  line-height: 2.5rem;
-  position: absolute;
+}
+.quote:before {
+  transfrom: translateX(50%);
 }
 .quote:before {
   content: "“";
-  top: .25em;
-  left: -.5em;
-}
-.quote:after {
-  content: "”";
-  bottom: -.1em;
-  margin-left: .1em;
-  position: absolute;
 }
 .source {
   font-size: 1.25rem;;
   letter-spacing: 0.05em;
   line-height: 1.1;
   text-align: right;
-  margin-right: 4em;
+  margin-right: 1em;
 }
 .source:before {
   content: "—";
 }
-.citation {
-  font-style: italic;
+/* Get Quote Button--------------- */
+#loadQuote{
+  background: rgba(0,0,0,.5);
+  width: 100%;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  transition: ease 1s;
 }
-.citation:before {
-  content: ", ";
-  font-style: normal;
+#loadQuote span:after{
+  content:" \2192";
+  transition: ease 1s;
+  font-size: 0px;
+  line-height: inherit;
+  color: transparent;
+  /*display: none;*/
 }
-.year:before {
-  content: ", ";
-  font-style: normal;
+#loadQuote:hover{
+  background-color: rgba(0,0,0,.8);
 }
-
-#loadQuote {
-  position: fixed;
-  width: 12em;
-  display: inline-block;
-  left: 50%;
-  margin-left: -6em;
-  bottom: 150px;
-  border-radius: 4px;
-  border: 2px solid #fff;
-  color: #fff;
-  background-color: #36b55c;
-  padding: 15px 0;
-  transition: .5s ;
-}
-#loadQuote:hover {
-  background-color: rgba(255,255,255,.25);
-}
-#loadQuote:focus {
-  outline: none;
+#loadQuote:hover span:after{
+  transform: translateX(10px);
+  color: #FFF;
+  font-size: inherit;
+  /*display: inline;*/
 }
 
-@media (max-width: 420px) {
-  .quote {
-    font-size: 2.5rem;
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { 
+  .container{
+    width: 50%;
+    min-height: auto;
+    margin-top: 20px;
   }
-  .quote:before, .quote:after {
-    font-size: 3rem;
+  #loadQuote{
+    width: 50%;
+    margin: 0 auto;
   }
-  .source {
-    font-size: 1rem;
+  #shareQuote span:after{
+    color: transparent;
+    transition: ease 1s;
+    margin-left: -60px;
   }
+  #shareQuote span:hover #tweetBtn{
+    fill: #1976D2;
+  }
+  #shareQuote span:hover:after{
+    display: inline;
+    color: inherit;
+    margin-left: 0px;
+  }
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+
 }
