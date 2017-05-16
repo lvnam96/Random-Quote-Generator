@@ -1,0 +1,21 @@
+html{
+  @include box-sizing(border-box);
+}
+*, *:before, *:after{
+  @include box-sizing();
+}
+::-webkit-scrollbar{
+  display: none;
+}
+body{
+  min-width: 100%;
+  min-height: 100%;
+  background-color: $color-bg;
+  font-family: $stack-catamaran;
+  font-weight: 100;
+  color: $color-text;
+  overflow: hidden;
+}
+a:visited{
+  color: $color-text;
+}

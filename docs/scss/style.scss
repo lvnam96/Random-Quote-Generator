@@ -1,0 +1,6 @@
+@import 'variables';
+@import 'mixins';//like function of CSS
+
+@import "base/index";
+@import "layout/index";
+@import "components/manifest";//manifest là cách gọi của cách sử dụng 1 file để import các file khác còn lại trong 1 thư mục, và dùng file đó để import vào file style.scss chính

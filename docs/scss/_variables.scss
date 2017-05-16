@@ -1,0 +1,12 @@
+//variables
+$white: #FFF;
+$black: #212121;
+//function variable: use variable(s) in a variable
+$color-bg: $black;
+$color-text: $white;
+//font stacks
+$stack-sans-serif: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+$stack-catamaran: 'Catamaran', $stack-sans-serif;
+//asset path: url('#{$path-img}/image-name.jpg')
+$path-img: '../imgs';
+$path-font: '../fonts';

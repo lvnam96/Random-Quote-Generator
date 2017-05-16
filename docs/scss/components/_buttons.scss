@@ -1,0 +1,16 @@
+.fa{
+  cursor: pointer;
+  background-color: #000;
+  border-radius: 50%;
+  padding: .6rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  @include transition();
+}
+.fa-clicked{
+  @include transform();
+}
+.buttons>div{
+  margin-top: 50px;
+  display: inline-block;
+}

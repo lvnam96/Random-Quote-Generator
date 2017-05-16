@@ -1,0 +1,20 @@
+@charset "UTF-8";//if using the original character (like — or “) in 'content' property, it's neccessary to put @charset in this file. Otherwise the sass compiler will print wrong characters.
+#quoteBox{
+  z-index: 2;
+  background-color: $color-bg;
+  @include transition();
+}
+.quote{
+  font-size: 2rem;
+  margin: 0;
+}
+.quote:before{
+  content: "\201C";
+  font-size: 50px;
+}
+.author{
+  letter-spacing: 0.2rem;
+}
+.author:before{
+  content: "\2014";
+}

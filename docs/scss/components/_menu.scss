@@ -1,0 +1,13 @@
+#menuDiv{
+  background-color: $color-bg;
+  height: 0;
+  @include transition();
+}
+#menuDiv, #menuDiv *{
+  z-index: 1;
+}
+#menuDiv>h4{
+  /*opacity: 0;*/
+  visibility: hidden;
+  font-weight: normal;
+}

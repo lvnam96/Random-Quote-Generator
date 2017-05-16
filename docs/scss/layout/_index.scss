@@ -1,0 +1,14 @@
+.container{
+  margin: 0 auto;
+  padding: 0 30px;
+  text-align: center;
+}
+.section1{
+  @extend %fullheight;
+  @include transition();
+  @extend %center-by-flexbox;
+}
+.section2{
+  @extend %fullheight;
+  @include transition();
+}

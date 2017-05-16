@@ -1,0 +1,26 @@
+//@extend is a placeholder, like objecet variable containing a bunch of css rules; can include variables in it like mixins, but not as flexible as mixin (mixins can change variables (cause it has parameters) at the place it's called)
+
+// %transform-rotate360{
+// 	-moz-transform: rotate(360deg);
+//   -webkit-transform: rotate(360deg);
+//   -ms-transform: rotate(360deg);
+//   transform: rotate(360deg);
+// }
+// %transition{
+// 	-webkit-transition: ease .8s;
+//   -moz-transition: ease .8s;
+//   -o-transition: ease .8s;
+//   -ms-transition: ease .8s;
+//   transition: ease .8s;
+// }
+//The upper code has changed to mixins in _mixins.scss for being more flexible in large projects
+
+%fullheight{
+  height: 100vh;
+}
+
+%center-by-flexbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+};

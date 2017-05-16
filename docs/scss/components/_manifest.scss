@@ -1,0 +1,7 @@
+@import 'gradientDiv';
+@import 'introText';
+@import 'buttons';
+@import 'menu';
+@import 'quoteBox';
+
+@import 'extends';//gần giống variable, nhưng có thể lưu 1 đoạn code gồm nhiều thuộc tính (thường xuất hiện chung với nhau trong project) chứ không phải lưu giá trị như variable, cũng gần giống mixin nhưng mixin theo hướng function (có parameter lúc gọi mixin) nên tiện cho việc reuse code cho các project khác hơn -> project lớn nên xài mixin, project nhỏ thì xài extend cũng được.
