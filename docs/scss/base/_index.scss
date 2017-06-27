@@ -16,6 +16,9 @@ body{
   color: $color-text;
   overflow: hidden;
 }
+#bodyWrapper{
+  overflow: hidden;
+}
 a:visited{
   color: $color-text;
 }

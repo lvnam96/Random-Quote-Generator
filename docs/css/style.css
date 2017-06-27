@@ -20,6 +20,9 @@ body {
   color: #FFF;
   overflow: hidden; }
 
+#bodyWrapper {
+  overflow: hidden; }
+
 a:visited {
   color: #FFF; }
 

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const buttons = document.getElementsByClassName('fa');
+  var buttons = document.getElementsByClassName('fa');
   
   function getQuote(e) {
     $.ajax({
@@ -22,13 +22,13 @@ document.addEventListener('DOMContentLoaded', function() {
   getQuote();
 
   buttons[0].addEventListener('click', function() {
-    const firstSection = document.getElementsByClassName('section1')[0];
+    var firstSection = document.getElementsByClassName('section1')[0];
     firstSection.style.height = '0';
     firstSection.children[0].style.display = 'none';
   });
 
   buttons[1].addEventListener('click', function() {
-    let quote = document.getElementsByClassName('quote')[0].textContent,
+    var quote = document.getElementsByClassName('quote')[0].textContent,
     author = document.getElementsByClassName('author')[0].textContent,
     //there's a bug: README.md
     shareURL = "https://twitter.com/share?text=\"" + quote + "\" by " + author + "&related=lvnam96&hashtags=randomquote&via=lvnam96";
@@ -36,16 +36,21 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   buttons[2].addEventListener('click', function() {
-    const menuDiv = document.getElementById('menuDiv'),
-          quoteBox = document.getElementById('quoteBox');
-    if(menuDiv.classList.contains('invisible')) {
+    var menuDiv = document.getElementById('menuDiv'),
+          quoteBox = document.getElementById('quoteBox'),
+          i;
+    if (menuDiv.classList.contains('invisible')) {
       menuDiv.className = '';
       quoteBox.style.marginTop = '100px';
-      for(let i = 0; i < 2; i++) setTimeout(function() {menuDiv.children[i].style.visibility = 'visible';}, i*150);
-    }else {
+      for (i = 0; i < 2; i++) {
+        setTimeout(function(i) {
+          menuDiv.children[i].style.visibility = 'visible';
+        }, i*150, i);
+      }
+    } else {
       menuDiv.className = 'invisible';
       quoteBox.style.marginTop = '0';
-      for(let i = 0; i < 2; i++) menuDiv.children[i].style.visibility = 'hidden';
+      for (i = 0; i < 2; i++) menuDiv.children[i].style.visibility = 'hidden';
     }
   });
 
