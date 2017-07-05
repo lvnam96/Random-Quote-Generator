@@ -1,13 +1,16 @@
 #menuDiv{
-  background-color: $color-bg;
-  height: 0;
+  background-color: #111;
   @include transition();
+  max-width: 80%;
+  margin: auto;
+  padding: 10px 0;
+  height: 7rem;
 }
-#menuDiv, #menuDiv *{
-  z-index: 1;
+.hidding{
+	height: 0 !important;
+	@include transform(scaleY(0));
 }
-#menuDiv>h4{
-  /*opacity: 0;*/
-  visibility: hidden;
+#menuDiv>p{
   font-weight: normal;
+  font-size: 1rem;
 }

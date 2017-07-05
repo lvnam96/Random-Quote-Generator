@@ -1,4 +1,23 @@
+@keyframes bounce{
+  0%{
+    transform: translateY(15px);
+  }
+  100%{
+    transform: none;
+  }
+}
 .fa{
+  pointer-events: none;
+}
+.fa-clicked{
+  @include transform();
+}
+.buttons{
+  margin: 15px auto;
+}
+.buttons>div{
+  // margin-top: 50px;
+  display: inline-block;
   cursor: pointer;
   background-color: #000;
   border-radius: 50%;
@@ -7,10 +26,9 @@
   height: 2.4rem;
   @include transition();
 }
-.fa-clicked{
-  @include transform();
+.section1 .buttons>div{
+  @include animation(.5s, infinite, alternate, bounce);
 }
-.buttons>div{
-  margin-top: 50px;
-  display: inline-block;
+.section1 .buttons>div:hover{
+  animation-play-state: paused;
 }

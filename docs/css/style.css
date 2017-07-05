@@ -32,18 +32,18 @@ a:visited {
   text-align: center; }
 
 .section1 {
-  -webkit-transition: ease 0.8s;
-  -moz-transition: ease 0.8s;
-  -o-transition: ease 0.8s;
-  -ms-transition: ease 0.8s;
-  transition: ease 0.8s; }
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  transition: all 0.8s ease; }
 
 .section2 {
-  -webkit-transition: ease 0.8s;
-  -moz-transition: ease 0.8s;
-  -o-transition: ease 0.8s;
-  -ms-transition: ease 0.8s;
-  transition: ease 0.8s; }
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  transition: all 0.8s ease; }
 
 .gradientSticky {
   width: 100%;
@@ -55,59 +55,84 @@ a:visited {
   background: -webkit-linear-gradient(top, rgba(33, 33, 33, 0) 0%, rgba(33, 33, 33, 0.9) 100%), url("") center center no-repeat;
   background: linear-gradient(to bottom, rgba(33, 33, 33, 0) 0%, rgba(33, 33, 33, 0.9) 100%), url("") center center no-repeat; }
 
-.section1 > p {
-  display: table-cell;
+.section1 > div {
+  display: inline-block;
   vertical-align: middle;
   font-size: 20px; }
 
+@keyframes bounce {
+  0% {
+    transform: translateY(15px); }
+  100% {
+    transform: none; } }
 .fa {
+  pointer-events: none; }
+
+.fa-clicked {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg); }
+
+.buttons {
+  margin: 15px auto; }
+
+.buttons > div {
+  display: inline-block;
   cursor: pointer;
   background-color: #000;
   border-radius: 50%;
   padding: .6rem;
   width: 2.4rem;
   height: 2.4rem;
-  -webkit-transition: ease 0.8s;
-  -moz-transition: ease 0.8s;
-  -o-transition: ease 0.8s;
-  -ms-transition: ease 0.8s;
-  transition: ease 0.8s; }
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  transition: all 0.8s ease; }
 
-.fa-clicked {
-  -webkit-transform: rotate(360deg);
-  -moz-transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  transform: rotate(360deg); }
+.section1 .buttons > div {
+  -webkit-animation: 0.5s infinite alternate bounce;
+  -moz-animation: 0.5s infinite alternate bounce;
+  -o-animation: 0.5s infinite alternate bounce;
+  animation: 0.5s infinite alternate bounce; }
 
-.buttons > div {
-  margin-top: 50px;
-  display: inline-block; }
+.section1 .buttons > div:hover {
+  animation-play-state: paused; }
 
 #menuDiv {
-  background-color: #212121;
-  height: 0;
-  -webkit-transition: ease 0.8s;
-  -moz-transition: ease 0.8s;
-  -o-transition: ease 0.8s;
-  -ms-transition: ease 0.8s;
-  transition: ease 0.8s; }
+  background-color: #111;
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  max-width: 80%;
+  margin: auto;
+  padding: 10px 0;
+  height: 7rem; }
 
-#menuDiv, #menuDiv * {
-  z-index: 1; }
+.hidding {
+  height: 0 !important;
+  -webkit-transform: scaleY(0);
+  -moz-transform: scaleY(0);
+  -ms-transform: scaleY(0);
+  -o-transform: scaleY(0);
+  transform: scaleY(0); }
 
-#menuDiv > h4 {
-  /*opacity: 0;*/
-  visibility: hidden;
-  font-weight: normal; }
+#menuDiv > p {
+  font-weight: normal;
+  font-size: 1rem; }
 
 #quoteBox {
   z-index: 2;
   background-color: #212121;
-  -webkit-transition: ease 0.8s;
-  -moz-transition: ease 0.8s;
-  -o-transition: ease 0.8s;
-  -ms-transition: ease 0.8s;
-  transition: ease 0.8s; }
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  transition: all 0.8s ease; }
 
 .quote {
   font-size: 2rem;

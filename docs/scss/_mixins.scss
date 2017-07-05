@@ -7,13 +7,33 @@
   -webkit-transform: $value;
 	-moz-transform: $value;
   -ms-transform: $value;
+  -o-transform: $value;
   transform: $value;
 }
-
-@mixin transition($value: ease .8s) {
+@mixin transition($value: all .8s ease) {
 	-webkit-transition: $value;
   -moz-transition: $value;
   -o-transition: $value;
   -ms-transition: $value;
   transition: $value;
+}
+// @mixin keyframes($animationName) {
+//   @-webkit-keyframes $animationName {
+//     @content;
+//   }
+//   @-moz-keyframes $animationName {
+//     @content;
+//   }
+//   @-o-keyframes $animationName {
+//     @content;
+//   }
+//   @keyframes $animationName {
+//     @content;
+//   }
+// }
+@mixin animation($duration, $iteration-count, $direction, $name) {
+  -webkit-animation: $duration $iteration-count $direction $name;
+  -moz-animation: $duration $iteration-count $direction $name;
+  -o-animation: $duration $iteration-count $direction $name;
+  animation: $duration $iteration-count $direction $name;
 }

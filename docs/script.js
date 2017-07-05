@@ -1,7 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-  var buttons = document.getElementsByClassName('fa');
+  var buttons = document.getElementsByClassName('buttons'),
+      moveDownBTN = buttons[0].children[0],
+      tweetBTN = buttons[1].children[0],
+      menuBTN = buttons[1].children[1],
+      newQuoteBTN = buttons[1].children[2];
   
-  function getQuote(e) {
+  function getQuote() {
     $.ajax({
       headers: {
         'X-Mashape-Key': 'hwDTMUUCVAmshcSC33BAIIq3wLunp1WhqJcjsn42Fmxrg5qaMU',
@@ -18,16 +22,16 @@ document.addEventListener('DOMContentLoaded', function() {
         alert('Sorry, the server is not responding.');
       }
     });
-  };
+  }
   getQuote();
 
-  buttons[0].addEventListener('click', function() {
+  moveDownBTN.addEventListener('click', function(e) {
     var firstSection = document.getElementsByClassName('section1')[0];
     firstSection.style.height = '0';
     firstSection.children[0].style.display = 'none';
   });
 
-  buttons[1].addEventListener('click', function() {
+  tweetBTN.addEventListener('click', function(e) {
     var quote = document.getElementsByClassName('quote')[0].textContent,
     author = document.getElementsByClassName('author')[0].textContent,
     //there's a bug: README.md
@@ -35,29 +39,16 @@ document.addEventListener('DOMContentLoaded', function() {
     window.open(shareURL);
   });
 
-  buttons[2].addEventListener('click', function() {
+  menuBTN.addEventListener('click', function(e) {
     var menuDiv = document.getElementById('menuDiv'),
           quoteBox = document.getElementById('quoteBox'),
           i;
-    if (menuDiv.classList.contains('invisible')) {
-      menuDiv.className = '';
-      quoteBox.style.marginTop = '100px';
-      for (i = 0; i < 2; i++) {
-        setTimeout(function(i) {
-          menuDiv.children[i].style.visibility = 'visible';
-        }, i*150, i);
-      }
-    } else {
-      menuDiv.className = 'invisible';
-      quoteBox.style.marginTop = '0';
-      for (i = 0; i < 2; i++) menuDiv.children[i].style.visibility = 'hidden';
-    }
+    menuDiv.classList.toggle('hidding');
   });
 
-  buttons[3].addEventListener('click', function(e) {
+  newQuoteBTN.addEventListener('click', function(e) {
     getQuote();
-    buttons[3].className = 'fa fa-refresh fa-clicked';
-    setTimeout(function() {buttons[3].className = 'fa fa-refresh';}, 500);
+    newQuoteBTN.children[0].classList.toggle('fa-clicked');
   });
 });
 
