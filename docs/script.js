@@ -48,7 +48,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   newQuoteBTN.addEventListener('click', function(e) {
     getQuote();
-    newQuoteBTN.children[0].classList.toggle('fa-clicked');
+    newQuoteBTN.children[0].classList.toggle('clicked');
+    setTimeout(function() {
+      newQuoteBTN.children[0].classList.toggle('clicked');
+    }, 900);
   });
 });
 

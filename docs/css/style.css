@@ -68,7 +68,14 @@ a:visited {
 .fa {
   pointer-events: none; }
 
-.fa-clicked {
+.fa-refresh {
+  -webkit-transition: inherit;
+  -moz-transition: inherit;
+  -o-transition: inherit;
+  -ms-transition: inherit;
+  transition: inherit; }
+
+.clicked {
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
   -ms-transform: rotate(360deg);

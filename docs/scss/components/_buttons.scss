@@ -9,7 +9,10 @@
 .fa{
   pointer-events: none;
 }
-.fa-clicked{
+.fa-refresh{
+  @include transition(inherit);
+}
+.clicked{
   @include transform();
 }
 .buttons{
