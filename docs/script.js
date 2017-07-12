@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
-  getQuote();
 
   moveDownBTN.addEventListener('click', function(e) {
     var firstSection = document.getElementsByClassName('section1')[0];
@@ -53,5 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
       newQuoteBTN.children[0].classList.toggle('clicked');
     }, 900);
   });
+
+  newQuoteBTN.click();// initial new quote
 });
 
