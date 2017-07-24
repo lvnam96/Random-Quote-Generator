@@ -4,3 +4,44 @@
 @import "base/index";
 @import "layout/index";
 @import "components/manifest";//manifest là cách gọi của cách sử dụng 1 file để import các file khác còn lại trong 1 thư mục, và dùng file đó để import vào file style.scss chính
+
+@media (min-width: 40rem) {
+	.section1 {
+		font-size: 1.2em;
+	}
+}
+@media (min-width: 40rem) and (orientation: portrait),
+			 (min-width: 80rem) and (orientation: landscape) {
+	.section2 {
+		font-size: 1.2em;
+	}
+}
+@media (min-width: 80rem) {
+	.section1 {
+		font-size: 1.6em;
+	}
+}
+@media (min-width: 80rem) and (orientation: portrait),
+			 (min-width: 120rem) and (orientation: landscape) {
+	.section2 {
+		font-size: 1.6em;
+	}
+}
+@media (min-width: 120rem) {
+	.section1 {
+		font-size: 2em;
+	}
+}
+@media (min-width: 120rem) and (orientation: portrait) {
+	.section2 {
+		font-size: 2em;
+	}
+}
+@media (orientation: landscape) {
+	.buttons:first-child {
+	  margin: 1.125em auto 0;
+	}
+	#menuDiv {
+	  margin: 0.2em auto;
+	}
+}

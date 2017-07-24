@@ -26,8 +26,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
   moveDownBTN.addEventListener('click', function(e) {
     var firstSection = document.getElementsByClassName('section1')[0];
-    firstSection.style.height = '0';
+    var secondSection = document.getElementsByClassName('section2')[0];
+    secondSection.classList.add('showing');
     firstSection.children[0].style.display = 'none';
+    // secondSection.children[0].style.display = 'initial';
+    firstSection.classList.remove('showing');
   });
 
   tweetBTN.addEventListener('click', function(e) {

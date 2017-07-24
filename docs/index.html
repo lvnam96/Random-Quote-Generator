@@ -10,18 +10,16 @@
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-<div id="bodyWrapper">
-  <div class="gradientSticky">
-  </div>
   <div class="container">
-    <div class="section1">
-      <div>You can find a famous quote in a famous film randomed by our super power!
+    <section class="section1 showing">
+      <div>
+        <p>You can find a famous quote in a famous film randomed by our super power!</p>
         <div class="buttons">
           <div><i id="nextPage" class="fa fa-arrow-down"></i></div>
         </div>
       </div>
-    </div>
-    <div class="section2">
+    </section>
+    <section class="section2">
       <div class="buttons">
         <div id="shareQuoteBtn" title="Tweet this quote!">
           <i class="fa fa-twitter" aria-hidden="true"></i>
@@ -41,9 +39,10 @@
         <p class="quote"></p>
         <p class="author"></p>
       </div>
-    </div>
+    </section>
   </div>
-</div>
+  <div class="gradientSticky">
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="script.js"></script>
 </body>

@@ -15,11 +15,11 @@
 // }
 //The upper code has changed to mixins in _mixins.scss for being more flexible in large projects
 
-%fullheight{
-  height: 100vh;
+%fullheight {
+  height: 100%;
 }
 
-%center-by-flexbox{
+%center-by-flexbox {
   display: flex;
   justify-content: center;
   align-items: center;

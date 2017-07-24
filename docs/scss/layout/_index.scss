@@ -1,14 +1,27 @@
-.container{
+.container {
+	display: flex;
+	flex-direction: column;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 2rem;
   text-align: center;
-}
-.section1{
   @extend %fullheight;
+  font-size: 1rem;
+}
+.section1 {
   @include transition();
   @extend %center-by-flexbox;
+  overflow: hidden;
+  height: 0%;
+  flex: 0 1 0%;
+  font-size: 1em;
 }
-.section2{
-  @extend %fullheight;
+.section2 {
   @include transition();
+  height: 0%;
+  flex: 0 1 0%;
+  font-size: 1em;
+}
+.showing {
+	height: 100%;
+	flex: 1 1 100% !important;
 }

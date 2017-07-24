@@ -2,9 +2,9 @@
   background-color: #111;
   @include transition();
   max-width: 80%;
-  margin: auto;
+  margin: 1em auto;
   padding: 10px 0;
-  height: 7rem;
+  height: 7em;
 }
 .hidding{
 	height: 0 !important;
@@ -12,5 +12,5 @@
 }
 #menuDiv>p{
   font-weight: normal;
-  font-size: 1rem;
+  font-size: 1em;
 }
